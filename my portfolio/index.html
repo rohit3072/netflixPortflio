@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141414" />
+  <meta name="description" content="Rohit Roy — IT student, developer, and builder of useful digital experiences." />
+  <title>Rohit Roy | The Developer Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="Rohit Roy home">ROHIT<span>ROY</span><i>®</i></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Open search">⌕</button>
+      <button class="profile-chip" id="profileButton" aria-label="Show profile">RR</button>
+      <button class="menu-btn" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <span>⌕</span><input id="siteSearch" type="search" placeholder="Search projects, skills, or interests..." aria-label="Search portfolio">
+    <button id="closeSearch" aria-label="Close search">×</button>
+    <div class="search-hint">Try “Serenity”, “JavaScript”, or “hackathon”</div>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="live-dot"></span> THE DEVELOPER COLLECTION <span class="year">2026</span></p>
+        <p class="kicker">A PORTFOLIO ORIGINAL</p>
+        <h1>BUILDING<br><span>WHAT'S NEXT.</span></h1>
+        <div class="hero-meta"><span class="top-ten">TOP</span><strong>1</strong><span>CSE STUDENT</span><span class="separator">•</span><span>DEVELOPER</span><span class="separator">•</span><span>CREATIVE THINKER</span></div>
+        <p class="hero-copy">I'm Rohit Roy — a Computer Science and Engineering student with a CGPA of 8.68, building useful digital experiences through Python and web development. This is my collection of projects, skills, and what I'm building next.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-light" href="#projects"><span>▶</span> Explore Projects</a>
+          <a class="btn btn-glass" href="#about"><span>ⓘ</span> More About Me</a>
+          <button class="btn btn-glass save-btn" id="saveHero"><span>＋</span> My List</button>
+        </div>
+        <p class="save-note" id="saveNote" aria-live="polite"></p>
+      </div>
+      <div class="hero-side-note"><span class="side-line"></span><span>DESIGN. DEVELOP. DELIVER.</span></div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-mark">↓</span></div>
+    </section>
+
+    <section class="quick-stats wrap">
+      <div><strong>01</strong><span>Curiosity-first mindset</span></div>
+      <div><strong>02</strong><span>Impact-driven projects</span></div>
+      <div><strong>03</strong><span>Always learning</span></div>
+      <div><strong>∞</strong><span>Ideas in the queue</span></div>
+    </section>
+
+    <section class="content-section wrap" id="projects">
+      <div class="section-heading">
+        <div><p class="section-label">NOW STREAMING</p><h2>Featured Projects</h2></div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="impact">Social Impact</button><button class="filter" data-filter="hackathon">Hackathon</button>
+        </div>
+      </div>
+      <div class="project-row" id="projectGrid">
+        <article class="project-card featured" data-category="impact web" data-search="serenity ai mental wellness companion gemini mood tracker journal meditation">
+          <button class="poster poster-serenity open-project" data-project="serenity" aria-label="View Serenity project details">
+            <span class="poster-tag">FEATURED ORIGINAL</span><span class="poster-symbol">✳</span><span class="poster-title">SERENITY</span><span class="poster-subtitle">A LITTLE MORE PEACE, EVERY DAY.</span><span class="poster-footer">AI WELLNESS EXPERIENCE</span>
+          </button>
+          <div class="card-info"><div><h3>Serenity</h3><p>Voice-enabled AI mental wellness companion</p></div><button class="round-add open-project" data-project="serenity" aria-label="More about Serenity">＋</button></div>
+          <div class="card-tags"><span>Gemini API</span><span>JavaScript</span><span>Social Impact</span></div>
+        </article>
+        <article class="project-card" data-category="hackathon web" data-search="urbankart smart city commerce platform local sellers buyers hackathon maps">
+          <button class="poster poster-urbankart open-project" data-project="urbankart" aria-label="View UrbanKart project details">
+            <span class="poster-tag">HACKATHON BUILD</span><span class="urban-mark">U<span>↗</span></span><span class="poster-title">URBAN<span class="thin">KART</span></span><span class="poster-subtitle">LOCAL FINDS. BIG POSSIBILITIES.</span><span class="poster-footer">SMART CITY COMMERCE</span>
+          </button>
+          <div class="card-info"><div><h3>UrbanKart</h3><p>Connecting local sellers with nearby buyers</p></div><button class="round-add open-project" data-project="urbankart" aria-label="More about UrbanKart">＋</button></div>
+          <div class="card-tags"><span>HTML/CSS</span><span>Bootstrap</span><span>Hackathon</span></div>
+        </article>
+        <article class="project-card" data-category="web impact" data-search="ecoswap sustainable product exchange clothes books electronics">
+          <button class="poster poster-ecoswap open-project" data-project="ecoswap" aria-label="View EcoSwap project details">
+            <span class="poster-tag">GOOD FOR THE PLANET</span><span class="eco-icon">↻</span><span class="poster-title">EcoSwap</span><span class="poster-subtitle">PASS IT ON. KEEP IT CIRCULAR.</span><span class="poster-footer">SUSTAINABLE EXCHANGE</span>
+          </button>
+          <div class="card-info"><div><h3>EcoSwap</h3><p>A simple exchange concept for reusable goods</p></div><button class="round-add open-project" data-project="ecoswap" aria-label="More about EcoSwap">＋</button></div>
+          <div class="card-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </article>
+        <article class="project-card" data-category="web" data-search="sensify mood based music website spotify youtube playlists">
+          <button class="poster poster-sensify open-project" data-project="sensify" aria-label="View Sensify project details">
+            <span class="poster-tag">FEEL IT. PLAY IT.</span><span class="soundwave">∿ ∿ ∿</span><span class="poster-title">SENSIFY</span><span class="poster-subtitle">YOUR MOOD. YOUR SOUNDTRACK.</span><span class="poster-footer">MOOD-BASED MUSIC</span>
+          </button>
+          <div class="card-info"><div><h3>Sensify</h3><p>A music discovery concept built around moods</p></div><button class="round-add open-project" data-project="sensify" aria-label="More about Sensify">＋</button></div>
+          <div class="card-tags"><span>JavaScript</span><span>Bootstrap</span><span>UI Design</span></div>
+        </article>
+        <article class="project-card" data-category="web" data-search="portfolio personal website responsive interface">
+          <button class="poster poster-portfolio open-project" data-project="portfolio" aria-label="View portfolio project details">
+            <span class="poster-tag">THE COLLECTION</span><span class="rr-monogram">RR</span><span class="poster-title">THE<br>MAKER</span><span class="poster-subtitle">IDEAS MADE INTERACTIVE.</span><span class="poster-footer">PERSONAL PORTFOLIO</span>
+          </button>
+          <div class="card-info"><div><h3>Personal Portfolio</h3><p>A cinematic home for my work and story</p></div><button class="round-add open-project" data-project="portfolio" aria-label="More about portfolio">＋</button></div>
+          <div class="card-tags"><span>Responsive</span><span>CSS</span><span>JavaScript</span></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No matching titles in this collection. Try another search or filter.</p>
+    </section>
+
+    <section class="spotlight wrap" id="about">
+      <div class="spotlight-art"><div class="spotlight-glow"></div><div class="portrait-placeholder"><span>RR</span></div><span class="art-caption">THE PERSON BEHIND THE PIXELS</span></div>
+      <div class="spotlight-copy">
+        <p class="section-label">FEATURED PROFILE</p><h2>Meet <span>Rohit Roy.</span></h2>
+        <p class="lead">Student by day. Builder by instinct. Curious by default.</p>
+        <p>I'm pursuing a B.Tech in Computer Science & Engineering at Jhulelal Institute of Technology, Nagpur, with a CGPA of 8.68. I enjoy Python, web development, and building practical software projects that can make everyday life a little better.</p>
+        <div class="profile-details"><div><span>FOCUS</span><strong>Python, web development & software</strong></div><div><span>BASED IN</span><strong>Nagpur, India</strong></div><div><span>CURRENT CHAPTER</span><strong>B.Tech CSE · CGPA 8.68</strong></div></div>
+        <div class="hero-buttons"><a class="btn btn-light" href="#contact">Let's Connect</a><a class="btn btn-glass" href="https://github.com/rohit3072" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+      </div>
+    </section>
+
+    <section class="content-section wrap" id="skills">
+      <div class="section-heading"><div><p class="section-label">YOUR NEXT BINGE</p><h2>Skills in My Toolkit</h2></div><span class="section-note">Currently sharpening the fundamentals.</span></div>
+      <div class="skills-grid">
+        <div class="skill-tile"><span class="skill-icon html-icon">5</span><strong>HTML</strong><small>Structure & accessibility</small></div>
+        <div class="skill-tile"><span class="skill-icon css-icon">✳</span><strong>CSS</strong><small>Responsive layouts & styling</small></div>
+        <div class="skill-tile"><span class="skill-icon js-icon">JS</span><strong>JavaScript</strong><small>Interaction & logic</small></div>
+        <div class="skill-tile"><span class="skill-icon bs-icon">B</span><strong>Bootstrap</strong><small>Responsive UI components</small></div>
+        <div class="skill-tile"><span class="skill-icon py-icon">Py</span><strong>Python</strong><small>Programming & problem solving</small></div>
+        <div class="skill-tile"><span class="skill-icon git-icon">⌘</span><strong>Git & GitHub</strong><small>Version control workflow</small></div>
+      </div>
+      <div class="profile-details resume-extra">
+        <div><span>RELEVANT COURSEWORK</span><strong>Data Structures, DBMS, Operating Systems, Computer Networks, OOP, Software Engineering</strong></div>
+        <div><span>TECHNICAL INTERESTS</span><strong>Web Development, Cybersecurity, Artificial Intelligence, Software Development</strong></div>
+        <div><span>LANGUAGES</span><strong>English, Hindi, Marathi, Bengali</strong></div>
+        <div><span>CGPA</span><strong>8.68 · B.Tech CSE</strong></div>
+      </div>
+    </section>
+
+    <section class="content-section wrap" id="journey">
+      <div class="section-heading"><div><p class="section-label">PREVIOUSLY ON ROHIT</p><h2>The Journey So Far</h2></div></div>
+      <div class="timeline">
+        <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">PURSUING</div><div><h3>B.Tech · Computer Science & Engineering</h3><p>Jhulelal Institute of Technology, Nagpur</p></div><span class="timeline-status">IN PROGRESS</span></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2023</div><div><h3>Diploma · Computer Engineering</h3><p>Government Polytechnic, Gadchiroli</p></div><span class="timeline-status">COMPLETED</span></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">EXPERIENCE</div><div><h3>Internship · SSIT Nagpur</h3><p>Hands-on exposure and practical learning in a professional setting.</p></div><span class="timeline-status">EXPERIENCE</span></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">MILESTONE</div><div><h3>Serenity · 2nd Prize</h3><p>Recognized in a college project competition for the mental wellness companion concept.</p></div><span class="timeline-status">HIGHLIGHT</span></div>
+      </div>
+    </section>
+
+    <section class="quote-banner wrap">
+      <div class="quote-mark">“</div><blockquote>Great things are built one curious idea at a time.</blockquote><p>MY CURRENT MOTTO</p>
+    </section>
+
+    <section class="contact-section wrap" id="contact">
+      <div><p class="section-label">END CREDITS? NOT YET.</p><h2>Let's build something<br><span>worth watching.</span></h2><p class="contact-copy">Open to internships, entry-level opportunities, collaborations, and meaningful projects.</p></div>
+      <div class="contact-actions"><a class="btn btn-light" href="mailto:rohit.roy@example.com?subject=Let's%20connect">✉ Email Me</a><a class="btn btn-glass" href="https://www.linkedin.com/in/rohit-roy-069173270/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn btn-glass" href="https://github.com/rohit3072" target="_blank" rel="noreferrer">GitHub ↗</a><p class="small-note">Email: rohitroy3072@gmail.com</p></div>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand footer-brand" href="#top">ROHIT<span>ROY</span><i>®</i></a><p>Made with curiosity, caffeine, and a little cinematic drama.</p><div><a href="#top">Back to top ↑</a><span>© 2026 Rohit Roy</span></div></footer>
+
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="project-modal"><button class="modal-close" id="modalClose" aria-label="Close project details">×</button><p class="section-label" id="modalKicker">PROJECT DETAILS</p><h2 id="modalTitle">Project</h2><p id="modalDescription"></p><div class="modal-tech" id="modalTech"></div><p class="modal-note" id="modalNote"></p><button class="btn btn-light" id="modalAction">Add to My List ＋</button></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
